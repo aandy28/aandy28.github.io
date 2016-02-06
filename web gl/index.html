@@ -7,49 +7,9 @@
 
 	</head>
 	<body>
-		<script src="scripts/three.js"></script>
-		<script>
-			// setup scene
-			var scene = new THREE.Scene();
-
-			//add camera
-			//THREE.PerspectiveCamera(fov, aspect, near, far)
-
-			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-
-			
-			//add a renderer
-			var renderer = new THREE.WebGLRenderer();
-
-			renderer.setSize(window.innerWidth, window.innerHeight);
-
-			//add the renderer element to the DOM so it is in our page
-
-			document.body.appendChild(renderer.domElement);
-			var geometry = new THREE.BoxGeometry(20, 20, 20);
-			var material = new THREE.MeshLambertMaterial({color: 0xfd59d7});
-			var cube = new THREE.Mesh(geometry, material);
-			scene.add(cube);
-
-			//place the camera at z of 100
-			camera.position.z = 100;
-
-			var light = new THREE.PointLight(0xffff00);
-			light.position.set(10, 0, 25);
-			scene.add(light);
-
-			var render = function(){
-				requestAnimationFrame(render);
-
-				cube.rotation.x += 0.02;
-				cube.rotation.y += 0.02;
-				camera.updateProjectionMatrix();
-
-				renderer.render(scene, camera);
-			};
-
-			render();
-
-		</script>
+		<ul>
+			<li><a href="/particle-fountain.html">Particle Fountain</a></li>
+			<li><a href="/rotation-box.html">Web GL Box rotation</a></li>
+		</ul>
 	</body>
 </html>
