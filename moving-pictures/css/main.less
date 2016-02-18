@@ -52,19 +52,15 @@ body {
             height: 100px;
             margin: 50px 0;
             transform: translateX(-100%);
-            -webkit-animation: cloud-one 15s infinite;
+            -webkit-animation: cloud-one 15s infinite cubic-bezier(.2,1,.9,-0.5);
             /* Safari 4+ */
-            -moz-animation: cloud-one 15s infinite;
+            -moz-animation: cloud-one 15s infinite cubic-bezier(.2,1,.9,-0.5);
             /* Fx 5+ */
-            -o-animation: cloud-one 15s infinite;
+            -o-animation: cloud-one 15s infinite cubic-bezier(.2,1,.9,-0.5);
             /* Opera 12+ */
-            animation: cloud-one 15s infinite;
+            animation: cloud-one 15s infinite cubic-bezier(.2,1,.9,-0.5);
             /* IE 10+, Fx 29+ */
-            animation-timing-function: ease-in-out;
 
-
-            -webkit-transform-origin: center bottom;
-            transform-origin: center bottom;
 
             &.two {
                 margin-top: -90px;
