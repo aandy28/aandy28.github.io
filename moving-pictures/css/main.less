@@ -374,6 +374,7 @@ body {
                     border-radius:10px;
                     width:30px;
                     height:30px;
+                    position:absolute;
 
                     &:before
                     {
@@ -383,6 +384,7 @@ body {
                         position:absolute;
                         top:0;
                         left:15px;
+                        content:'';
                     }
 
                     &:after
@@ -393,41 +395,90 @@ body {
                         position:absolute;
                         top:15px;
                         left:0;
+                        content:'';
                     }
 
                     &.one
                     {
-                        
+                        top:10px;
+                        left:10px;
                     }
 
                     &.two
                     {
-                         
+                        top:10px;
+                        right:10px;
                     }
 
                     &.three
                     {
-                           
+                        top:65px;
+                        left:10px; 
                     }
 
                     &.four
                     {
-                        
+                        top:65px;
+                        right:10px;
+                    }
+
+                    &.five
+                    {
+                        top:125px;
+                        left:10px; 
+                    }
+
+                    &.six
+                    {
+                        top:125px;
+                        right:10px;
                     }
                 }
                 
 
                 .door
                 {
-                    &:before
-                    {
+                    background-color:#9AC1C3;
+                    border:3px solid #ffffff;
+                    border-radius:10px;
+                    width:30px;
+                    height:50px;
+                    position:absolute;
+                    bottom: 0;
+                    left: 57px;
 
-                    }
-
-                    &:after
+                    .door-inner
                     {
-                        
+                        width: 15px;
+                        height: 15px;
+                        position: absolute;
+                        top: 5px;
+                        left: 6px;
+                        border:1px solid #ffffff;
+
+                        &:before
+                        {
+                            width:1px;
+                            background-color:#ffffff;
+                            height:100%;
+                            position:absolute;
+                            top:0;
+                            left:7px;
+                            content:'';
+                        }
+
+                        &:after
+                        {
+                            width:100%;
+                            background-color:#ffffff;
+                            height:1px;
+                            position:absolute;
+                            top:7px;
+                            left:0;
+                            content:'';
+                        }
                     }
+                    
                 }
             }
         }
