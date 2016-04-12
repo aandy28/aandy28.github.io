@@ -5,7 +5,7 @@ module angularWithTS {
     export class Routes {
         static $inject = ["$routeProvider"];
         static ConfigureRoutes($routeProvider: ng.route.IRouteProvider) {
-            $routeProvider.when("/home", { controller: "angularWithTS.controllers.tsDemoController", templateUrl: "/app/views/playlist.html", controllerAs: "playList" });
+            $routeProvider.when("/home", { controller: "angularWithTS.controllers.tsDemoController", templateUrl: "app/views/playlist.html", controllerAs: "playList" });
             $routeProvider.otherwise({redirectTo: "/home"});
         }
     }
