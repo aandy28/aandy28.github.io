@@ -13,16 +13,16 @@ html, body, .full-page
 
 .flipper
 {
-    width: @board-width;
-    height: @board-height;
+    width: 100px;
+    height:  180px;
     position: absolute;
     perspective: 500px;
     perspective-origin: 50% 50%;
 
     .half
     {
-        width: @board-width;
-        height: @board-height / 2;
+        width: 100px;
+        height:  180 / 2px;
         position: absolute;
         overflow: hidden;
         // backface-visibility: hidden;
@@ -30,10 +30,10 @@ html, body, .full-page
         
         .board
         {
-            width: @board-width;
-            height: @board-height;
+            width: 100px;
+            height:  180px;
             background-color: #333;
-            border: @board-border solid white;
+            border: 5px solid white;
             border-radius: 10px;
             position: absolute;
             top: 0;
@@ -46,10 +46,10 @@ html, body, .full-page
                 position: absolute;
                 top: 0;
                 left: 0;
-                font-size: @board-height - (@board-border * 2) - 40px;
-                line-height: @board-height;
-                width: @board-width - (@board-border * 2);
-                height: @board-height - (@board-border * 2);
+                font-size:  180 - (5 * 2) - 40px;
+                line-height:  180px;
+                width: 100 - (5 * 2)px;
+                height:  180 - (5 * 2)px;
                 text-align: center;
             }
 
@@ -65,7 +65,7 @@ html, body, .full-page
 
         &.bottom
         {
-            top: @board-height / 2;
+            top: 180 / 2px;
             transform-origin: 50% 0%;
 
             .board
