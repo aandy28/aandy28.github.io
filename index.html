@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html ng-app="angularWithTS">
+<head>
+    <title>Angular JS With Typescript</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">Click the following button to get your favourite tracks.</div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div ng-view="">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Aandy28.GitHub.io : A place for all my front end tests">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-<style>.center{text-align:center;}</style>
-    <title>Aandy28.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/aandy28">View on GitHub</a>
-
-          <h1 id="project_title">Aandy28.GitHub.io</h1>
-          <h2 id="project_tagline">A place for all my front end tests</h2>
-
-        </header>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.modules.js"></script>
+    <script src="app/services/playlistService.js"></script>
+    <script src="app/controllers/tsDemoController.js"></script>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-      <h1 class="center">Please feel free to check out my portfolio:</h1>
-      <h2 class="center"><a href="http://www.andysmithdev.co.uk" target="_blank">http://www.andysmithdev.co.uk</a></h2>
-        <ul>
-            <li><a href="/web%20gl/particle-fountain.html">Particle Fountain</a></li>
-            <li><a href="/web%20gl/tardis.html">Tardis from Dr Who in WebGL</a></li>
-            <li><a href="/moving-pictures/">Moving Pictures, CSS Animation</a></li>
-        </ul>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
