@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html {
+  background-image: -webkit-radial-gradient(center bottom, circle, #1c0130, #050017);
+  background-image: radial-gradient(circle at center bottom, #1c0130, #050017);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+html body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+html body a {
+  color: #ffffff;
+}
+html body .header-overlay {
+  opacity: .5;
+  z-index: 200;
+  color: #ffffff;
+  padding: 25px 50px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+html body .cloud-container {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+}
+html body .cloud-container .cloud.group1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+html body .cloud-container .cloud.group2 {
+  -webkit-animation: moveclouds 25s linear infinite;
+  -moz-animation: moveclouds 25s linear infinite;
+  -o-animation: moveclouds 25s linear infinite;
+  margin-top: 80px;
+}
+html body .cloud-container .cloud.group2 img {
+  width: 200px;
+}
+html body .star {
+  position: absolute;
+  background: #1d1a61;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+html body .star.flicker {
+  -webkit-animation: flickerAnimation 15s infinite;
+  animation: flickerAnimation 15s infinite;
+}
+html body .star.flickerTwo {
+  -webkit-animation: flickerAnimation 10s infinite;
+  animation: flickerAnimation 10s infinite;
+}
+html body .planets {
+  width: 533px;
+  height: 533px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -326px 0 0 -226px;
+  z-index: 10;
+}
+html body .planets div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#050017+0,540733+100&0+0,1+100 */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #050017 0%, #540733 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #050017 0%, #540733 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00050017', endColorstr='#540733', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+html body .planets .planetOne {
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+}
+html body .planets .planetTwo {
+  width: 194px;
+  height: 194px;
+  border-radius: 50%;
+  right: 0;
+  left: auto;
+}
+html body .earth {
+  z-index: 100;
+  position: relative;
+  width: 1500px;
+  margin-left: auto;
+  margin-top: 508px;
+  margin-right: auto;
+}
+html body .earth .earthImage {
+  vertical-align: bottom;
+}
+html body .earth .earthImage img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+html body .earth .character {
+  width: 60px;
+  height: 72px;
+  background: url('http://andysmithdev.co.uk/projects/wish/characterWave.fw.png') left center;
+  background-repeat: no-repeat;
+  z-index: 50;
+  position: absolute;
+  top: -70px;
+  left: 700px;
+  -webkit-animation: wave 1s steps(8) infinite;
+          animation: wave 1s steps(8) infinite;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wave {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -480px;
+  }
+}
+@keyframes wave {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -480px;
+  }
+}
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: -1000px;
+  }
+  100% {
+    margin-left: 2000px;
+  }
+}
