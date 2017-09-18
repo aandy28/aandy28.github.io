@@ -24,6 +24,31 @@
         height: 100%;
         margin: 0;
         padding: 0;
+
+      }
+      body
+      {
+        background-color: rgba(147, 78, 242, .6);
+      }
+      .heading
+      {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding-top: 20px;
+      }
+
+      .heading img
+      {
+        display: inline-block;
+      }
+
+      .heading h1
+      {
+        display: inline-block;
+        margin-left: 30px;
+        color: white;
+        border: none;
       }
     </style>
 </head>
@@ -31,8 +56,13 @@
 <body>
 
   <div class="middle-wrap">
+    <div class="heading">
+      <img src="images/Logo-transp_white.png" />
+      <h1>Member Locations</h1>
+    </div>
     <div class="middle">
         <div class="negative-space">
+          
           <div id="map"></div>
         </div>
     </div>
