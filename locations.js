@@ -96,7 +96,7 @@ function initialize()
     ["Clare Eckermann", "@clareecker","Horten, Norway",59.417084,10.483213],
     ["Benedicte Jenssen", "@jenssendesign","Kristiansand, Norway",58.159912,8.018206],
     ["Francisco Aguilera G", "@FranciscoAMK","Santiago, Chile",-33.44889,-70.669265],
-    ["Nathan Albrecht", "@albrechtnate","Cedarville, OHIO",39.7478402,-83.8259781],
+    ["Nathan Albrecht", "@albrechtnate","Philadelphia, OH",39.7478402,-83.8259781],
     ["Jessica Dolliver", "@jesdolliver","Mystic, CT",41.354266,-71.966462],
     ["Lily Hargreaves", "@lilyhargreaves","Melbourne, Australia",-37.813628,144.963058],
     ["Kelli White", "@kelli","Milton Keynes, UK",52.040622,-0.759417],
@@ -106,26 +106,26 @@ function initialize()
     ["Andy Smith", "@andy_smith","Darlington UK",54.5311746,-1.6233878],
   ];
 
-  var clusterStyles = [
-    {
-      textColor: 'white',
-      url: '/images/clusters/1.png',
-      height: 50,
-      width: 50
-    },
-   {
-      textColor: 'white',
-      url: '/images/clusters/2.png',
-      height: 60,
-      width: 60
-    },
-   {
-      textColor: 'white',
-      url: '/images/clusters/3.png',
-      height: 70,
-      width: 70
-    }
-  ];
+  // var clusterStyles = [
+  //   {
+  //     textColor: 'white',
+  //     url: 'path/to/smallclusterimage.png',
+  //     height: 40,
+  //     width: 40
+  //   },
+  //  {
+  //     textColor: 'white',
+  //     url: 'path/to/mediumclusterimage.png',
+  //     height: 50,
+  //     width: 50
+  //   },
+  //  {
+  //     textColor: 'white',
+  //     url: 'path/to/largeclusterimage.png',
+  //     height: 60,
+  //     width: 60
+  //   }
+  // ];
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 2,
@@ -142,54 +142,40 @@ function initialize()
 
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][3], locations[i][4]),
-      map: map,
-      id: i++,
+      map: map
     });
     markers.push(marker)
 
-    member = {name: locations[i][0], location: locations[i][2], id:i++}
-    members.push(member);
+    member = {name: locations[i][0], location: locations[i][2]}
+    members.push(member)
 
     // console.log(marker.getPosition());
 
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
         var name = locations[i][0];
-        var username = locations[i][1];
-        var location = locations[i][2];
-        var html = "<b>Name: " + name + "</b> <br/>Username: " + username + "</b> <br/>Location: " + location;;
+        var username = locations[i][2];
+        var html = "<b>Name: " + name + "</b> <br/>Username: " + username;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       }
     })(marker, i));
   }
 
-  var mcOptions = {
-    styles: clusterStyles,
-};
+  var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
-  var markerCluster = new MarkerClusterer(map, markers, mcOptions, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-  
-  // Object.keys(members).map(function(key, index) {
-  //   var el = document.getElementById("members");
-  //   var parent = document.createElement("ul");
-  //   var node = document.createElement("li");
-  //   var link = document.createElement("a");
-  //   let linkId = members[key].id
-  //   link.innerText = members[key].name + " - " + members[key].location;
-  //   link.setAttribute('href', '#');
-  //   link.setAttribute('data-markerid', linkId);
-  //   link.classList.add("marker-link");
-  //   parent.appendChild(node);
-  //   node.appendChild(link);
-  //   el.appendChild(parent);
+  createMembers(members);
+}
 
-  //   link.onclick = function(e){
-  //     console.log(linkId);
-  //     google.maps.event.trigger(markers[linkId]);
-  //   };
+function createMembers(members)
+{
+  let membersContainer = $('.members');
 
-  // });
+  Object.keys(members).map(function(key, index) {
+    let memberList = "<ul></ul>"
+    let member = "<li><b>Name: " + members[key].name + "</b> <br/>Location: " + members[key].location +"</li>";
 
-  
+    memberList.append(member);
+    membersContainer.append(memberList);
+  });
 }
