@@ -155,8 +155,9 @@ function initialize()
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
         var name = locations[i][0];
-        var username = locations[i][2];
-        var html = "<b>Name: " + name + "</b> <br/>Username: " + username;
+        var username = locations[i][1];
+        var location = locations[i][2];
+        var html = "<b>Name: " + name + "</b> <br/>Username: " + username + "</b> <br/>Location: " + location;;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       }
