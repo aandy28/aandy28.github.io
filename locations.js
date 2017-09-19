@@ -154,28 +154,18 @@ function initialize()
     google.maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
         var name = locations[i][0];
-        var username = locations[i][2];
-        var html = "<b>Name: " + name + "</b> <br/>Username: " + username;
+        var username = locations[i][1];
+        var location = locations[i][2];
+        var html = "<b>Name: " + name + "</b> <br/>Username: " + username + "</b> <br/>Location: " + location;
         infowindow.setContent(html);
         infowindow.open(map, marker);
       }
     })(marker, i));
   }
 
-  var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+  // var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
-  createMembers(members);
+  
 }
 
-function createMembers(members)
-{
-  let membersContainer = $('.members');
 
-  Object.keys(members).map(function(key, index) {
-    let memberList = "<ul></ul>"
-    let member = "<li><b>Name: " + members[key].name + "</b> <br/>Location: " + members[key].location +"</li>";
-
-    memberList.append(member);
-    membersContainer.append(memberList);
-  });
-}
