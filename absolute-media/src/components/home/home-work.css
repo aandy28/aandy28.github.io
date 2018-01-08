@@ -1,0 +1,41 @@
+.home-work {
+    position: relative;
+    color: #000;
+    
+}
+
+@media (min-width: 640px)
+{
+  .home-work {
+    background: #f5f5f5;
+    background-image: url(./home-work.jpg);
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 960px)
+{
+.home-work .u-width-limiter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}}
+
+.type-hero-headline {
+    margin: 0 0 20px;
+    font-size: 96px;
+    line-height: 77px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+@media (min-width: 640px)
+{.type-hero-headline {
+    font-size: 120px;
+    line-height: 95px;
+    letter-spacing: -5px;
+}}
