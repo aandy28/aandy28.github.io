@@ -969,3 +969,74 @@ svg:not(:root) {
     min-height: 100vh;
     background: url(../images/temp-recent-work-bg.jpg) no-repeat center 120px/cover;
 }
+
+.case-study-heading-wrapper {
+    margin: 0 0 75px;
+}
+
+@media (min-width: 640px)
+{.case-study-heading-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-top: 75px;
+}}
+
+@media (min-width: 960px)
+{
+.case-study-heading-wrapper {
+    margin-bottom: 150px;
+}}
+
+.case-study-heading .type-block-sub-headline2 {
+    margin: 15px 0 0;
+}
+
+.case-study-heading {
+    max-width: 420px;
+}
+
+.case-study-sections-wrapper>.o-section-std:first-child {
+    margin-top: 170px;
+}
+
+.case-study-limited-paragraph {
+    max-width: 75%;
+}
+
+@media (min-width: 960px)
+{.o-section-std {
+    margin: 120px 0;
+}}
+
+.u-width-limiter--low-limited {
+    max-width: 1060px;
+}
+
+.u-image-full-width {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-study-sections-wrapper .u-image-full-width {
+    max-width: 1280px;
+}
+
+@media (min-width: 640px)
+{.o-section--below-nav.seven-up {
+    background-image: url(../images/temp-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}}
+
+@media (min-width: 960px)
+{.o-section--below-nav.seven-up {
+    padding-top: 120px;
+    
+}}
