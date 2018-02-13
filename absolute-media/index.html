@@ -20,7 +20,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>ABSOLUTE MEDIA - We Are Absolute</title>
-
+    <script type="text/javascript" src="./js/main.js"></script>
   </head>
   <body>
     <nav class='c-primary-nav'>
@@ -42,16 +42,16 @@
         <div class="c-primary-nav__overlay-wrapper-backdrop-gradient" ></div>
         <div class="c-primary-nav__overlay-wrapper" >
           <ul class='c-primary-nav__overlay' >
-            <a href="/absolute-media/" >
+            <a href="/" >
               <li tabIndex="0" class="type-bloc-headline" >Home</li>
             </a>
-            <a href="/absolute-media/services" >
+            <a href="/services" >
               <li tabIndex="0" class="type-bloc-headline" >Services</li>
             </a>
-            <a href="/absolute-media/recent-work" >
+            <a href="/recent-work" >
               <li tabIndex="0" class="type-bloc-headline" >Recent Work</li>
             </a>
-            <a href="/absolute-media/meet-the-team" >
+            <a href="/meet-the-team" >
               <li tabIndex="0" class="type-bloc-headline" >Meet The Team</li>
             </a>
           </ul>
@@ -133,26 +133,7 @@
         </div>
       </section>
     </div>
-
-  <script>
-    var active = false;
-
-    function navToggle() {
-      const currentState = active;
-      var navWrapper = document.getElementsByClassName('c-primary-nav');
-      var navList = document.getElementsByClassName('c-primary-nav__overlay');
-
-      if(active == false)
-      {
-        active = true;
-        navWrapper[0].classList.add('c-primary-nav--active');
-        navList[0].classList.add('on');
-      }else{
-        active = false;
-        navWrapper[0].classList.remove('c-primary-nav--active');
-        navList[0].classList.remove('on');
-      }
-    }
-  </script>
+  
+  
   </body>
 </html>

@@ -201,7 +201,12 @@ a>.type-subheadlines-buttons {
 .page-norm {
     min-height: 100vh;
     color: #000;
-    /* background: #050505 url(./images/temp-bg.jpg) no-repeat center 120px/cover; */
+    padding-left:10px;
+    padding-right:10px;
+    @media (min-width: 640px) {
+        padding-left:0;
+        padding-right:0;
+    }
 }
 
 .App {
@@ -281,7 +286,8 @@ a>.type-subheadlines-buttons {
 .home-blog {
     position: relative;
     background-color: #fc3;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center center;
     color: #000;
     background-image: url(../images/home-contact.jpg);
 }
@@ -945,7 +951,8 @@ svg:not(:root) {
 
 .type-bloc-headline {
     margin: 0 0 20px;
-    font-size: 70px;
+
+    font-size: 48px;
     line-height: 56px;
     text-transform: uppercase;
     font-weight: 700;
