@@ -1,0 +1,66 @@
+/*
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/* Basic */
+
+body,
+input,
+select,
+textarea {
+  font-size: 11pt;
+}
+
+header.major {
+  margin-bottom: 4em;
+}
+
+header.major h2 {
+  font-size: 2.5em;
+}
+
+header.major p {
+  font-size: 1.3em;
+}
+
+/* Feature */
+
+.feature-grid .feature {
+  margin-bottom: 2em;
+}
+
+/* Banner */
+
+#banner {
+  padding: 14em 0 11em 0;
+}
+
+#banner h2 {
+  font-size: 2.5em;
+}
+
+#banner .icaa-logo {
+  display: inline-block;
+  margin: 20px;
+  max-width: 36%;
+}
+
+#banner .icaa-logo {
+  display: inline-block;
+  margin: 20px auto 20px auto;
+  min-width: 13%;
+}
+
+#banner .wocad-logo {
+  display: inline-block;
+  margin: 20px;
+  max-width: 36%;
+}
+
+/* Wrapper */
+
+.wrapper.style3 header.major {
+  margin-bottom: 2em;
+}
